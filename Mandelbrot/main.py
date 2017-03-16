@@ -20,7 +20,7 @@ def DisplayFractal(a, fmt='jpeg'):
 
 if __name__ == '__main__':
     sess = tf.InteractiveSession()
-
+    file_writer = tf.summary.FileWriter('./graph', sess.graph)
     #using numpy to create a 2d array of complex numbers
     Y, X = np.mgrid[-1.3:1.3:0.005, -2:1:0.005]
     Z = X+1j*Y
